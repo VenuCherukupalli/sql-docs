@@ -80,4 +80,7 @@ This topic describes improvements made to the [!INCLUDE[ssdenoversion-md](../inc
 - New Permissions: `DATABASE SCOPED CREDENTIAL` is now a class of securable, supporting `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`, and `VIEW DEFINITION` permissions. `ADMINISTER DATABASE BULK OPERATIONS`, which is restricted to SQL Database, is now visible in `sys.fn_builtin_permissions`.   
 - The [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) DMV is added to provide operating system information for both Windows and Linux.   
 - The database roles are created with R Services for managing permissions associated with packages. For more information, see [R Package management for SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
+If a custom cetificate is not provisioned for chanel encryption using SSL/TLS protocol, SQL Server creates a Self-signed certificate. Until SQL Server 2016, this self-signed certificate was created using SHA1 algorithm which inherently
+is a weak algorithm. Starting with SQL Server 2017, SQL Server uses a more stronger SHA256 algorithm for the self-signed certificate.
+
 
